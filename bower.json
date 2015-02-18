@@ -1,0 +1,17 @@
+{
+  "name": "backbone_movie",
+  "version": "0.0.0",
+  "homepage": "https://github.com/julieljohnson/backbone_movie",
+  "authors": [
+    "Julie Johnson <john2939@email.sc.edu>"
+  ],
+  "description": "making movie page with backbone",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

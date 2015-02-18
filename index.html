@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href ="styles.css">
+    <!--<script type="text.template" id='postTmpl'>-->
+    <title>Backbone Movie</title>
+</head>
+<body>
+
+    <script type="text/template" id="moviePost">
+        <img src='<%= image %>'>
+        <h2><%= title %></h2>
+        <p><%= content %></p>
+        });
+    </script>
+
+
+<div class="wrapper">
+    <h1>Movie</h1>
+    <hr />
+    <div class="section">
+        <button class="showCreate">Add Post</button>
+          <form action="" id="createMovie">
+            <p><input type="text" name= "newImage" placeholder= "image"></p>
+            <p><input type="text" name="newTitle" placeholder="Title"></p>
+            <p><textarea name="newContent" id="" cols="30" rows="10" placeholder="Post Content"></textarea></p>
+            <p><button type="submit">Create New Post</button></p>
+          </form>
+    </div>
+
+    <button class="delete">Delete</button>
+    <button class="edit">Edit</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+
+<script src="models.js"></script>
+<script src="collections.js"></script>
+<script src="views.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
