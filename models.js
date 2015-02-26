@@ -1,14 +1,22 @@
-var PostMovie = Backbone.Model.extend({
-  url: 'http://tiy-fee-rest.herokuapp.com/collections/backbonemoviejj',
-  idAttribute: '_id',
-  defaults: {
-        "image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Jurassic_Park_poster.jpg/220px-Jurassic_Park_poster.jpg",
-        "title": "jurrasic Park",
-        "content": "Movie about cloned dinosaurs"
+// Post Model
 
-    },
+var MovieModel = Backbone.Model.extend({
+  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/backbonemoviejj',
+  idAttribute: '_id',
+  defaults: function() {
+   return {
+     photo: 'http://fillmurray.com/200/200'
+   };
+ },
 
   initialize: function () {
     console.log("model was created");
   }
+});
+
+
+// Post Collection
+var MovieCollection = Backbone.Collection.extend({
+  url: 'http://tiy-fee-rest.herokuapp.com/collections/backbonemoviejj',
+  model: MovieModel
 });

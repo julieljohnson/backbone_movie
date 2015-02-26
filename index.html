@@ -1,45 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href ="styles.css">
-    <!--<script type="text.template" id='postTmpl'>-->
-    <title>Backbone Movie</title>
-</head>
-<body>
-
-    <script type="text/template" id="moviePost">
-        <img src='<%= image %>'>
-        <h2><%= title %></h2>
-        <p><%= content %></p>
-        });
-    </script>
+  <meta charset="UTF-8">
+  <title>Backbone Movie</title>
+  <link rel="stylesheet" href="styles.css">
 
 
-<div class="wrapper">
-    <h1>Movie</h1>
-    <hr />
-    <div class="section">
-        <button class="showCreate">Add Post</button>
-          <form action="" id="createMovie">
-            <p><input type="text" name= "newImage" placeholder= "image"></p>
-            <p><input type="text" name="newTitle" placeholder="Title"></p>
-            <p><textarea name="newContent" id="" cols="30" rows="10" placeholder="Post Content"></textarea></p>
-            <p><button type="submit">Create New Post</button></p>
-          </form>
+
+  <script type="text/template" id="movieTmpl">
+
+    <div class="main">
+      <img src="<%= photo %>">
+      <h2><%= title %></h2>
+      <p><%= content %></p>
+      <p><%= director %></p>
+      <hr>
     </div>
 
-    <button class="delete">Delete</button>
-    <button class="edit">Edit</button>
+     <form id="updatePost" action="">
+
+        <p><label for="editPhoto">Upload Movie Image</label></p>
+          <p><input type="text" name="editPhoto" value="<%= photo %>" placeholder="Image Url"></p>
+
+        <p><label for="editTitle"><p>Movie Title</p></label></p>
+          <p><input type="text" name="editTitle" value="<%= title %>"  placeholder="Title"></p>
 
 
+        <p><label for="editContent">Movie Synopsis</label></p>
+          <p><textarea class="form-control" rows="5" name="editContent" placeholder="Content"><%= content %></textarea></p>
+
+         <p><label for="editDirector"><p>Director</p></label></p>
+       <p><input type="text" name="editTitle" value="<%= director %>"  placeholder="Director"></p>
+
+
+      </form>
+
+     <div class="buttons">
+      <button id="deletePost">Delete</button>
+      <button id="editPost">Edit</button>
+      <button id="submitEdit">Submit</button>
+     </div>
+
+
+</script>
+
+
+</head>
+<body>
+<section>
+  <h1>backbone movie collection</h1> <!--<button class="showCreate">Add Post</button>-->
+  <form action="" id="createPost">
+    <label for="newPhoto"></label>
+    <input type="url" id="newPhoto" name="newPhoto" placeholder="place photo URL here">
+    <p><input type="text" name="newTitle" placeholder="Title"></p>
+    <p><textarea name="newContent" id="" cols="30" rows="10" placeholder="Post Content"></textarea></p>
+    <p><input type="text" name="newDirector" placeholder="Director"></p>
+    <p><button type="submit" id="submitListing">Create New Post</button></p>
+  </form>
+
+
+</section>
+<aside>
+<div class="box">
+  <h3>This is the sidebar</h3>
 </div>
-
-
-
-
-
-
+</aside>
 
 
 
@@ -48,7 +74,8 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/backbone/backbone.js"></script>
 
-<script src="models.js"></script>
+
+<script src="models-collection.js"></script>
 <script src="collections.js"></script>
 <script src="views.js"></script>
 <script src="main.js"></script>

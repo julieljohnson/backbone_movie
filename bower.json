@@ -13,5 +13,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "sinon-chai": "~2.7.0",
+    "chai": "~2.1.0",
+    "sinon": "~1.12.2"
+  }
 }
